@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: 'Inter', system-ui;
     color: #243e63;
+       
+}
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -109,7 +114,6 @@ img {
     border: none;
     margin-top: 32px;
 }
-
 
 /* 
 
@@ -364,6 +368,7 @@ p {
 FEATURES ↓
 
 */
+
 
 .section__title {
     text-align: center;
