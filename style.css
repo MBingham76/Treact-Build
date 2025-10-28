@@ -122,6 +122,10 @@ h2 {
     font-size: 32px;
 }
 
+.no-cursor {
+    cursor: not-allowed;
+}
+
 /* 
 
 NAVBAR ↓
@@ -272,6 +276,19 @@ nav {
     position: fixed;
     top: 24px;
     right: 18px;
+}
+
+.modal__link:hover {
+    cursor: pointer;
+    color: #6415ff;
+    font-size: 20px;
+    transition: all 300ms ease;
+}
+
+.modal__link--primary:hover {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 
@@ -912,7 +929,7 @@ START / CALL TO ACTION ↓
 .start__para {
     font-size: 32px;
     color: #fff;
-    margin-left: 176px;
+    margin-left: 120px;
     z-index: 1;
 }
 
@@ -1039,12 +1056,12 @@ footer {
     justify-content: space-between;
     padding-top: 60px;
     border-top: 2px solid #742cff;
+    z-index: 1;
 }
 
 .footer__logo {
     display: flex;
     align-items: center;
-    z-index: 1;
 }
 
 .footer__logo--img {
@@ -1118,12 +1135,20 @@ MOBILE RESPONSIVENESS ↓
         padding: 0 8px 0 8px;
         font-size: 16px;
     }
+
+    .start__buttons {
+        padding-right: 24px;
+    }
+
+    .start__para {
+            margin-left: 48px;
+        }
     
     footer {
         padding: 80px 32px;
     }
 
-    @media (max-width: 990px) {
+    @media (max-width: 1000px) {
         .feature {
             width: calc(100% / 2);
         }
@@ -1131,8 +1156,7 @@ MOBILE RESPONSIVENESS ↓
         .testimonial__bottom {
         flex-direction: column;
         }
-    }
-    
+    }        
 }
 
 @media (max-width: 850px) {
@@ -1144,9 +1168,26 @@ MOBILE RESPONSIVENESS ↓
         display: block;
     }
 
-    #quality .container, #values .container {
+     #quality .container, #values .container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .start__para {
+        font-size: 24px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .start__buttons {
+        z-index: 2;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    #start .btn {
+        padding: 8px 24px;
+        margin: 0 4px;
     }
 }
 /*Tablets, Large Smartphones*/
@@ -1168,7 +1209,7 @@ MOBILE RESPONSIVENESS ↓
     }
 
     #features {
-        margin-top: 100vh;
+        margin-top: 60vh;
     }
 
     .header__img {
@@ -1222,8 +1263,9 @@ MOBILE RESPONSIVENESS ↓
         width: 30px;
     }
 
-    .feature__img--wrapper, .values__img--wrapper {
-        padding: 5px;
+    .feature__img--wrapper, .values__img--wrapper, .quality__img--wrapper, .testimonials__img{
+        padding: 8px;
+        margin-top: 24px;
         margin-left: 16px;
     }
 }
@@ -1248,6 +1290,15 @@ MOBILE RESPONSIVENESS ↓
         width: 100%;
     }
 
+    .plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
     h1 {
         font-size: 30px;
     }
@@ -1256,10 +1307,6 @@ MOBILE RESPONSIVENESS ↓
 /* Small Smart Phones */
 
 @media (max-width: 550px) {
-    .btn__menu {
-        display: block;
-    }
-
     .landing {
         width: 100%;
     }
@@ -1309,12 +1356,12 @@ MOBILE RESPONSIVENESS ↓
         padding: 0;
     }
 
-    .values__list, .plans, .testimonial__bottom {
+    .values__list, .testimonial__bottom {
         flex-direction: column;
     }
 
     .plan {
-        max-width: fit-content;
+        max-width: inherit;
     }
 
     .plan__btn {
@@ -1350,11 +1397,44 @@ MOBILE RESPONSIVENESS ↓
         margin: 0 4px;
     }
 
+    .footer__columns {
+        flex-wrap: wrap;
+    }
+
+    .footer__column {
+        width: calc(100% / 3);
+        padding: 16px;
+    }
+
+    .footer__column--title {
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+    }
+
+    .footer__logo, .footer__copyright{
+        padding-bottom: 16px;
+    }
+
+    .footer__socials {
+        padding-top: 8px;
+    }
+
     h1 {
         font-size: 30px;
     }
 
     h2 {
         font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+        .footer__column {
+        width: calc(100% / 2);
+        padding: 16px;
+        }
     }
 }
